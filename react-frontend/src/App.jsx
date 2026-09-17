@@ -11,13 +11,35 @@ import { API_BASE_URL } from './config';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState(() => {
+    try {
+      return localStorage.getItem('cardio_theme') || 'dark';
+    } catch (e) {
+      return 'dark';
+    }
+  });
   const [isBackendOnline, setIsBackendOnline] = useState(true);
+
+  // Sync theme class to document root element
+  useEffect(() => {
+    try {
+      if (theme === 'light') {
+        document.documentElement.classList.add('light');
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+      }
+    } catch (e) {}
+  }, [theme]);
 
   // Toggle Theme
   const toggleTheme = () => {
     const nextTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(nextTheme);
+    try {
+      localStorage.setItem('cardio_theme', nextTheme);
+    } catch (e) {}
   };
 
   // Check Backend Health Status on Mount
@@ -38,7 +60,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className={`min-h-screen flex flex-col font-sans transition-colors duration-300 ${theme === 'light' ? 'light bg-slate-50 text-slate-900' : 'bg-[#0b0f19] text-slate-100'}`}>
+    <div className={`min-h-screen flex flex-col font-sans transition-colors duration-300 ${theme === 'light' ? 'light bg-slate-50 text-slate-900' : 'dark bg-[#0b0f19] text-slate-100'}`}>
       {/* Top Navbar */}
       <Navbar
         activeTab={activeTab}

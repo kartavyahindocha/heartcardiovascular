@@ -145,3 +145,176 @@ body {
   border: 2px solid #ef4444;
   animation: pulseGlowHigh 2.5s ease-in-out infinite, fadeInUp 0.6s ease-out forwards;
 }
+
+/* ========================================================= */
+/* COMPREHENSIVE LIGHT MODE STYLING & HIGH CONTRAST OVERRIDES */
+/* ========================================================= */
+
+.light {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Light Mode Cards */
+.light .glass-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03) !important;
+}
+
+.light .glass-card:hover {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 12px 28px -5px rgba(2, 132, 199, 0.15) !important;
+}
+
+/* Light Mode Typography */
+.light .text-slate-100,
+.light .text-slate-200,
+.light h1.text-slate-100,
+.light h2.text-slate-100,
+.light h3.text-slate-100,
+.light h4.text-slate-100 {
+  color: #0f172a !important;
+}
+
+.light .text-slate-300 {
+  color: #334155 !important;
+}
+
+.light .text-slate-400 {
+  color: #64748b !important;
+}
+
+.light .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+/* Light Mode Inputs, Selects, and Textareas */
+.light input,
+.light select,
+.light textarea {
+  background-color: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+.light input:focus,
+.light select:focus,
+.light textarea:focus {
+  background-color: #ffffff !important;
+  border-color: #0284c7 !important;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15) !important;
+}
+
+.light input::placeholder,
+.light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Light Mode Buttons & Pills */
+.light button.bg-slate-900,
+.light button.bg-slate-800,
+.light .bg-slate-900\/60,
+.light .bg-slate-900\/70,
+.light .bg-slate-900\/80,
+.light .bg-slate-800\/80 {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+.light button.bg-slate-900:hover,
+.light button.bg-slate-800:hover {
+  background-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+/* Active Selection States in Light Mode */
+.light .bg-cyan-500\/20,
+.light .bg-cyan-500\/15 {
+  background-color: #e0f2fe !important;
+  border-color: #0284c7 !important;
+  color: #0369a1 !important;
+}
+
+.light .bg-rose-500\/20 {
+  background-color: #ffe4e6 !important;
+  border-color: #e11d48 !important;
+  color: #be123c !important;
+}
+
+.light .bg-emerald-500\/20,
+.light .bg-emerald-500\/10 {
+  background-color: #d1fae5 !important;
+  border-color: #059669 !important;
+  color: #047857 !important;
+}
+
+.light .bg-amber-500\/20 {
+  background-color: #fef3c7 !important;
+  border-color: #d97706 !important;
+  color: #b45309 !important;
+}
+
+.light .bg-purple-500\/20,
+.light .bg-purple-500\/10 {
+  background-color: #f3e8ff !important;
+  border-color: #9333ea !important;
+  color: #7e22ce !important;
+}
+
+.light .bg-indigo-500\/10 {
+  background-color: #e0e7ff !important;
+  border-color: #6366f1 !important;
+  color: #4338ca !important;
+}
+
+/* Result Cards in Light Mode */
+.light .result-card-low {
+  background: #f0fdf4 !important;
+  border: 2px solid #22c55e !important;
+}
+
+.light .result-card-moderate {
+  background: #fffbeb !important;
+  border: 2px solid #f59e0b !important;
+}
+
+.light .result-card-high {
+  background: #fef2f2 !important;
+  border: 2px solid #ef4444 !important;
+}
+
+/* Dividers & Borders */
+.light hr,
+.light .border-slate-800,
+.light .border-slate-700,
+.light .border-slate-700\/60 {
+  border-color: #e2e8f0 !important;
+}
+
+/* Modal Dialogs in Light Mode */
+.light .bg-slate-950\/80 {
+  background-color: rgba(15, 23, 42, 0.5) !important;
+}
+
+.light .bg-slate-900 {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light .bg-slate-800 {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Footer & Header in Light Mode */
+.light header {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.light footer {
+  background-color: #ffffff !important;
+  border-top: 1px solid #e2e8f0 !important;
+}
