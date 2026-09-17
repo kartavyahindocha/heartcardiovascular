@@ -17,8 +17,13 @@ export default function Footer() {
           </span>
         </div>
 
-        <div className="text-slate-500 text-[11px]">
-          © {new Date().getFullYear()} CardioHealth AI • Rajkot Cardiovascular Sciences Center, Gujarat, India.
+        <div className="text-slate-500 text-[11px] space-y-1">
+          <div>
+            © {new Date().getFullYear()} CardioHealth AI • Rajkot Cardiovascular Sciences Center, Gujarat, India.
+          </div>
+          <div className="text-slate-400 font-medium">
+            Developed by <span className="text-cyan-400 font-semibold">Kartavya Hindocha</span>
+          </div>
         </div>
       </div>
     </footer>
