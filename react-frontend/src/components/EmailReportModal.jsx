@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, X, CheckCircle, AlertCircle, Loader2, Send } from 'lucide-react';
+import { API_BASE_URL } from '../config';
 
 export default function EmailReportModal({ isOpen, onClose, assessmentResult }) {
   const [email, setEmail] = useState('');
@@ -19,7 +20,7 @@ export default function EmailReportModal({ isOpen, onClose, assessmentResult }) 
     setStatus(null);
 
     try {
-      const response = await fetch('/api/send-report-email', {
+      const response = await fetch(`${API_BASE_URL}/api/send-report-email`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

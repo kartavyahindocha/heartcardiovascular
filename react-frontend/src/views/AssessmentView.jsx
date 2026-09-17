@@ -4,6 +4,7 @@ import RiskGauge from '../components/RiskGauge';
 import HealthBreakdown from '../components/HealthBreakdown';
 import EmailReportModal from '../components/EmailReportModal';
 import { User, Stethoscope, Salad, Rocket, Loader2, Mail, CheckCircle2, AlertTriangle, AlertOctagon } from 'lucide-react';
+import { API_BASE_URL } from '../config';
 
 export default function AssessmentView() {
   // Form Inputs
@@ -42,7 +43,7 @@ export default function AssessmentView() {
     setError(null);
 
     try {
-      const response = await fetch('/api/generate', {
+      const response = await fetch(`${API_BASE_URL}/api/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -7,6 +7,8 @@ import AnalyticsView from './views/AnalyticsView';
 import AboutView from './views/AboutView';
 import ContactView from './views/ContactView';
 
+import { API_BASE_URL } from './config';
+
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
   const [theme, setTheme] = useState('dark');
@@ -22,7 +24,7 @@ export default function App() {
   useEffect(() => {
     const checkHealth = async () => {
       try {
-        const res = await fetch('/health');
+        const res = await fetch(`${API_BASE_URL}/health`);
         if (res.ok) {
           setIsBackendOnline(true);
         } else {
