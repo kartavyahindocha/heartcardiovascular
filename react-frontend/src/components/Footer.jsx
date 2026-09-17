@@ -22,7 +22,7 @@ export default function Footer() {
             © {new Date().getFullYear()} CardioHealth AI • Rajkot Cardiovascular Sciences Center, Gujarat, India.
           </div>
           <div className="text-slate-400 font-medium">
-            Developed by <span className="text-cyan-400 font-semibold">Kartavya Hindocha</span>
+            Developed by <span className="text-cyan-400 font-semibold">HINDOCHA KARTAVYA KALPESHBHAI</span>
           </div>
         </div>
       </div>
