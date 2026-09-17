@@ -96,6 +96,24 @@ export default function HealthBreakdown({ details = {}, riskScore = 0, riskLevel
         </div>
       </div>
 
+      {/* Identified Clinical Risk Drivers & Lifestyle Alerts */}
+      {details?.risk_factors && details.risk_factors.length > 0 && (
+        <div className="glass-card p-5 border border-slate-700/60 rounded-xl space-y-3">
+          <div className="text-xs font-bold uppercase tracking-wider text-slate-300 flex items-center gap-2">
+            <ShieldAlert className="w-4 h-4 text-amber-400" />
+            <span>Identified Risk Drivers & Lifestyle Modifiers</span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+            {details.risk_factors.map((factor, idx) => (
+              <div key={idx} className="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs flex items-start gap-2">
+                <span className="text-rose-400 mt-0.5 font-bold">⚠️</span>
+                <span className="text-slate-300">{factor}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Engine Attribution & Disclaimer */}
       <div className="text-center p-3 rounded-lg bg-slate-900/40 border border-slate-800 text-xs text-slate-400 flex justify-center items-center gap-2">
         <ShieldAlert className="w-4 h-4 text-cyan-400 shrink-0" />
