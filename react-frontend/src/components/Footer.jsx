@@ -18,7 +18,7 @@ export default function Footer() {
         </div>
 
         <div className="text-slate-500 text-[11px]">
-          © {new Date().getFullYear()} CardioHealth AI. All rights reserved. Powered by React, Vite, Tailwind CSS & FastAPI ML Engine.
+          © {new Date().getFullYear()} CardioHealth AI • Rajkot Cardiovascular Sciences Center, Gujarat, India.
         </div>
       </div>
     </footer>
